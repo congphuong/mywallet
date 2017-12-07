@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B27E5B4D1FC94C2A008F680F /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27E5B4C1FC94C2A008F680F /* HistoryVC.swift */; };
+		B27E5B4F1FC94C42008F680F /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27E5B4E1FC94C42008F680F /* WalletVC.swift */; };
+		B27E5B511FC94C57008F680F /* GenerateQRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27E5B501FC94C57008F680F /* GenerateQRVC.swift */; };
+		B27E5B531FC96126008F680F /* QRCodeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27E5B521FC96126008F680F /* QRCodeDetailVC.swift */; };
+		B299768A1FCBED59004A9F9A /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29976891FCBED59004A9F9A /* History.swift */; };
+		B2A442A21FC860C900C62CF6 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A442A11FC860C900C62CF6 /* VC2.swift */; };
 		B2E029611FC5661700040173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E029601FC5661700040173 /* AppDelegate.swift */; };
 		B2E029631FC5661700040173 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E029621FC5661700040173 /* ViewController.swift */; };
 		B2E029661FC5661700040173 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E029641FC5661700040173 /* Main.storyboard */; };
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B27E5B4C1FC94C2A008F680F /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		B27E5B4E1FC94C42008F680F /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
+		B27E5B501FC94C57008F680F /* GenerateQRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQRVC.swift; sourceTree = "<group>"; };
+		B27E5B521FC96126008F680F /* QRCodeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDetailVC.swift; sourceTree = "<group>"; };
+		B29976891FCBED59004A9F9A /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		B2A442A11FC860C900C62CF6 /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 		B2E0295D1FC5661700040173 /* MyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E029601FC5661700040173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E029621FC5661700040173 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +115,12 @@
 				B2E029671FC5661700040173 /* Assets.xcassets */,
 				B2E029691FC5661700040173 /* LaunchScreen.storyboard */,
 				B2E0296C1FC5661700040173 /* Info.plist */,
+				B2A442A11FC860C900C62CF6 /* VC2.swift */,
+				B27E5B4C1FC94C2A008F680F /* HistoryVC.swift */,
+				B27E5B4E1FC94C42008F680F /* WalletVC.swift */,
+				B27E5B501FC94C57008F680F /* GenerateQRVC.swift */,
+				B27E5B521FC96126008F680F /* QRCodeDetailVC.swift */,
+				B29976891FCBED59004A9F9A /* History.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -259,8 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A442A21FC860C900C62CF6 /* VC2.swift in Sources */,
+				B27E5B4D1FC94C2A008F680F /* HistoryVC.swift in Sources */,
+				B299768A1FCBED59004A9F9A /* History.swift in Sources */,
 				B2E029631FC5661700040173 /* ViewController.swift in Sources */,
 				B2E029611FC5661700040173 /* AppDelegate.swift in Sources */,
+				B27E5B511FC94C57008F680F /* GenerateQRVC.swift in Sources */,
+				B27E5B531FC96126008F680F /* QRCodeDetailVC.swift in Sources */,
+				B27E5B4F1FC94C42008F680F /* WalletVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +451,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQRFN68LQF;
 				INFOPLIST_FILE = MyWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.congphuong.MyWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,7 +467,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQRFN68LQF;
 				INFOPLIST_FILE = MyWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.congphuong.MyWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
