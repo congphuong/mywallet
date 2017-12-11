@@ -13,6 +13,7 @@ class QRCodeDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
         navigationItem.title = "QR code"
         setupView()
         let btShare = UIBarButtonItem(title: "share", style: .plain, target: self, action: #selector(btShareClick))

@@ -15,7 +15,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        navigationItem.largeTitleDisplayMode = .never
         navigationItem.title = "MyWallet"
+        
         setupView()
         
     }
@@ -63,7 +65,7 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(vc2, animated: true)
     }
     @objc func btWalletClick(){
-        let vc2 = WalletVC()
+        let vc2 = LoginVC()
         vc2.view.backgroundColor = .white
         self.navigationController?.pushViewController(vc2, animated: true)
     }
@@ -75,11 +77,11 @@ class ViewController: UIViewController {
     }
     
     func setupView() {
-        let btQR = createButton(image: #imageLiteral(resourceName: "barcode-reader-50"), label: "QR code")
+        let btQR = createButton(image: #imageLiteral(resourceName: "barcode-reader-50"), label: "Quét")
         btQR.addTarget(self, action: #selector(btQRClick), for: .touchUpInside)
         let btHistory = createButton(image: #imageLiteral(resourceName: "activity-history-50"), label: "Lịch sử")
         btHistory.addTarget(self, action: #selector(btHistoryClick), for: .touchUpInside)
-        let btGenerateQR = createButton(image: #imageLiteral(resourceName: "qr-code-50"), label: "Tạo QR code")
+        let btGenerateQR = createButton(image: #imageLiteral(resourceName: "qr-code-50"), label: "Tạo code")
         btGenerateQR.addTarget(self, action: #selector(btGenerateQRClick), for: .touchUpInside)
         let btWallet = createButton(image: #imageLiteral(resourceName: "wallet-50"), label: "Tài khoản")
         btWallet.addTarget(self, action: #selector(btWalletClick), for: .touchUpInside)

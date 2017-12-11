@@ -15,7 +15,13 @@ class HistoryVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Lịch Sử"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+        navigationItem.title = "Lịch sử"
+        
+        let searchControler = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchControler
+        //navigationItem.hidesSearchBarWhenScrolling = false
         
         collectionView?.backgroundColor = .white
         collectionView?.alwaysBounceVertical = true
@@ -110,22 +116,6 @@ class HistoryCell: BaseCell {
         addConstraintsWithFormat(format: "H:|-10-[v0]-10-|", views: dividerLineView)
         addConstraintsWithFormat(format: "V:[v0(1)]|", views: dividerLineView)
     }
-}
-
-extension UIView {
-    
-    func addConstraintsWithFormat(format: String, views: UIView...) {
-        
-        var viewsDictionary = [String: UIView]()
-        for (index, view) in views.enumerated() {
-            let key = "v\(index)"
-            viewsDictionary[key] = view
-            view.translatesAutoresizingMaskIntoConstraints = false
-        }
-        
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
-    }
-    
 }
 
 class BaseCell: UICollectionViewCell {

@@ -12,7 +12,7 @@ class VC2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "QR code"
+        navigationItem.title = "Quét"
         //setupView()
     }
     

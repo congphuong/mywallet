@@ -11,7 +11,9 @@ import UIKit
 class GenerateQRVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Tạo QR code"
+        navigationItem.largeTitleDisplayMode = .never
+        navigationItem.title = "Tạo code"
+        
         setupView()
     }
     

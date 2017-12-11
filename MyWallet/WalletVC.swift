@@ -11,6 +11,7 @@ import UIKit
 class WalletVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
         navigationItem.title = "Tài khoản"
     }
 }
