@@ -8,7 +8,7 @@
 
 import UIKit
 class LoginVC: UIViewController {
-    let host:String = "http://192.168.34.1:8080"
+    let host:String = "http://localhost:8080"
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoginView()
@@ -60,8 +60,8 @@ class LoginVC: UIViewController {
             let responseJSON = try? JSONSerialization.jsonObject(with: data!, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
                 print(responseJSON)
-                //let auth = Auth(json: responseJSON)
-                //print(auth?.token)
+                let auth = Auth(json: responseJSON)
+                print(auth!)
             }
         }.resume()
     }
@@ -78,14 +78,16 @@ class LoginVC: UIViewController {
 }
 
 struct Auth {
+    var id: Int
     var username: String
     var token: String
     
     init?(json: [String: Any]) {
-        guard let username = json["username"] as? String, let token = json["token"] as? String else{
+        guard let token = json["token"] as? String, let user = json["user"] as? [String: Any] else{
             return nil
         }
-        self.username = username
+        self.id = (user["machucvu"] as? Int)!
+        self.username = (user["username"] as? String)!
         self.token = token
     }
     

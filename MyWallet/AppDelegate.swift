@@ -21,7 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let friendsController = ViewController()
         friendsController.view.backgroundColor = .white
-        window?.rootViewController = UINavigationController(rootViewController: friendsController)
+        //let loginVC = LoginVC1()
+        //loginVC.view.backgroundColor = .white
+        let stb = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = stb.instantiateViewController(withIdentifier: "login") as! LoginVC1
+        
+        window?.rootViewController = UINavigationController(rootViewController: loginVC)
         
         return true
     }

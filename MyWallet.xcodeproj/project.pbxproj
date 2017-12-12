@@ -15,6 +15,8 @@
 		B29A12C71FDE3B1700604141 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29A12C61FDE3B1700604141 /* LoginVC.swift */; };
 		B29A12C91FDE3EAA00604141 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29A12C81FDE3EAA00604141 /* Extention.swift */; };
 		B2A442A21FC860C900C62CF6 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A442A11FC860C900C62CF6 /* VC2.swift */; };
+		B2CBCBEB1FDFAA910061D2AB /* LoginVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CBCBEA1FDFAA910061D2AB /* LoginVC1.swift */; };
+		B2CBCBED1FDFAAD90061D2AB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CBCBEC1FDFAAD90061D2AB /* RegisterVC.swift */; };
 		B2E029611FC5661700040173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E029601FC5661700040173 /* AppDelegate.swift */; };
 		B2E029631FC5661700040173 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E029621FC5661700040173 /* ViewController.swift */; };
 		B2E029661FC5661700040173 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E029641FC5661700040173 /* Main.storyboard */; };
@@ -22,6 +24,7 @@
 		B2E0296B1FC5661700040173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E029691FC5661700040173 /* LaunchScreen.storyboard */; };
 		B2E029761FC5661700040173 /* MyWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E029751FC5661700040173 /* MyWalletTests.swift */; };
 		B2E029811FC5661700040173 /* MyWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E029801FC5661700040173 /* MyWalletUITests.swift */; };
+		B2F91AA81FDFC556000C9717 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F91AA71FDFC556000C9717 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,8 @@
 		B29A12C61FDE3B1700604141 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B29A12C81FDE3EAA00604141 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		B2A442A11FC860C900C62CF6 /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
+		B2CBCBEA1FDFAA910061D2AB /* LoginVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC1.swift; sourceTree = "<group>"; };
+		B2CBCBEC1FDFAAD90061D2AB /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		B2E0295D1FC5661700040173 /* MyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E029601FC5661700040173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E029621FC5661700040173 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 		B2E0297C1FC5661700040173 /* MyWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E029801FC5661700040173 /* MyWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletUITests.swift; sourceTree = "<group>"; };
 		B2E029821FC5661700040173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2F91AA71FDFC556000C9717 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,9 @@
 				B29976891FCBED59004A9F9A /* History.swift */,
 				B29A12C61FDE3B1700604141 /* LoginVC.swift */,
 				B29A12C81FDE3EAA00604141 /* Extention.swift */,
+				B2CBCBEA1FDFAA910061D2AB /* LoginVC1.swift */,
+				B2CBCBEC1FDFAAD90061D2AB /* RegisterVC.swift */,
+				B2F91AA71FDFC556000C9717 /* API.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -289,8 +298,11 @@
 				B2E029631FC5661700040173 /* ViewController.swift in Sources */,
 				B29A12C91FDE3EAA00604141 /* Extention.swift in Sources */,
 				B2E029611FC5661700040173 /* AppDelegate.swift in Sources */,
+				B2CBCBEB1FDFAA910061D2AB /* LoginVC1.swift in Sources */,
 				B29A12C71FDE3B1700604141 /* LoginVC.swift in Sources */,
+				B2F91AA81FDFC556000C9717 /* API.swift in Sources */,
 				B27E5B511FC94C57008F680F /* GenerateQRVC.swift in Sources */,
+				B2CBCBED1FDFAAD90061D2AB /* RegisterVC.swift in Sources */,
 				B27E5B531FC96126008F680F /* QRCodeDetailVC.swift in Sources */,
 				B27E5B4F1FC94C42008F680F /* WalletVC.swift in Sources */,
 			);
