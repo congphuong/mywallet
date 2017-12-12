@@ -12,7 +12,6 @@
 		B27E5B511FC94C57008F680F /* GenerateQRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27E5B501FC94C57008F680F /* GenerateQRVC.swift */; };
 		B27E5B531FC96126008F680F /* QRCodeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27E5B521FC96126008F680F /* QRCodeDetailVC.swift */; };
 		B299768A1FCBED59004A9F9A /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29976891FCBED59004A9F9A /* History.swift */; };
-		B29A12C71FDE3B1700604141 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29A12C61FDE3B1700604141 /* LoginVC.swift */; };
 		B29A12C91FDE3EAA00604141 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29A12C81FDE3EAA00604141 /* Extention.swift */; };
 		B2A442A21FC860C900C62CF6 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A442A11FC860C900C62CF6 /* VC2.swift */; };
 		B2CBCBEB1FDFAA910061D2AB /* LoginVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CBCBEA1FDFAA910061D2AB /* LoginVC1.swift */; };
@@ -50,7 +49,6 @@
 		B27E5B501FC94C57008F680F /* GenerateQRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQRVC.swift; sourceTree = "<group>"; };
 		B27E5B521FC96126008F680F /* QRCodeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDetailVC.swift; sourceTree = "<group>"; };
 		B29976891FCBED59004A9F9A /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		B29A12C61FDE3B1700604141 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B29A12C81FDE3EAA00604141 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		B2A442A11FC860C900C62CF6 /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 		B2CBCBEA1FDFAA910061D2AB /* LoginVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC1.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				B27E5B501FC94C57008F680F /* GenerateQRVC.swift */,
 				B27E5B521FC96126008F680F /* QRCodeDetailVC.swift */,
 				B29976891FCBED59004A9F9A /* History.swift */,
-				B29A12C61FDE3B1700604141 /* LoginVC.swift */,
 				B29A12C81FDE3EAA00604141 /* Extention.swift */,
 				B2CBCBEA1FDFAA910061D2AB /* LoginVC1.swift */,
 				B2CBCBEC1FDFAAD90061D2AB /* RegisterVC.swift */,
@@ -299,7 +296,6 @@
 				B29A12C91FDE3EAA00604141 /* Extention.swift in Sources */,
 				B2E029611FC5661700040173 /* AppDelegate.swift in Sources */,
 				B2CBCBEB1FDFAA910061D2AB /* LoginVC1.swift in Sources */,
-				B29A12C71FDE3B1700604141 /* LoginVC.swift in Sources */,
 				B2F91AA81FDFC556000C9717 /* API.swift in Sources */,
 				B27E5B511FC94C57008F680F /* GenerateQRVC.swift in Sources */,
 				B2CBCBED1FDFAAD90061D2AB /* RegisterVC.swift in Sources */,

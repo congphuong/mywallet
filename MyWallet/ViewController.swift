@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        navigationController?.isNavigationBarHidden = false
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.title = "MyWallet"
         
@@ -65,9 +66,9 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(vc2, animated: true)
     }
     @objc func btWalletClick(){
-        let vc2 = LoginVC()
-        vc2.view.backgroundColor = .white
-        self.navigationController?.pushViewController(vc2, animated: true)
+        let stb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = stb.instantiateViewController(withIdentifier: "WalletVC") as? WalletVC
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     @objc func btGenerateQRClick(){

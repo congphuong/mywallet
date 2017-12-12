@@ -8,7 +8,7 @@
 
 import Foundation
 class API {
-    static let host:String = "http://192.168.1.19:8080"
+    static let host:String = "http://localhost:8080"
     static func login(username: String, password: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) -> Swift.Void {
         print("Login click")
         var url = URLRequest(url: URL(string: host + "/auth")!)
@@ -34,7 +34,7 @@ class API {
         url.httpMethod = "POST"
         url.addValue("application/json", forHTTPHeaderField: "Content-Type")
         url.addValue("application/json", forHTTPHeaderField: "Accept")
-        let json: [String: Any] = ["username": username,
+        let json: [String: Any] = ["userName": username,
                                    "password": password,
                                    "identify":identify,
                                    "firstName":name]
@@ -47,5 +47,20 @@ class API {
             }.resume()
     }
     
+    
+}
+struct Auth {
+    var id: Int
+    var username: String
+    var token: String
+    
+    init?(json: [String: Any]) {
+        guard let token = json["token"] as? String, let user = json["user"] as? [String: Any] else{
+            return nil
+        }
+        self.id = (user["machucvu"] as? Int)!
+        self.username = (user["username"] as? String)!
+        self.token = token
+    }
     
 }

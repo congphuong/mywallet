@@ -17,8 +17,26 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var txtName: UITextField!
     
     @IBAction func cancelClick(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        cancel()
     }
     
+    @IBAction func btRegisterClick(_ sender: Any) {
+        API.register(username: txtUsername.text!, password: txtPassword.text!, identify: txtIdentify.text!, name: txtName.text!){
+            (data,response,error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            let responseJSON = try? JSONSerialization.jsonObject(with: data!, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
+                self.cancel()
+            }
+        }
+    }
+    
+    func cancel(){
+        navigationController?.popViewController(animated: true)
+    }
     
 }

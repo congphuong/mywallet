@@ -19,14 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let friendsController = ViewController()
-        friendsController.view.backgroundColor = .white
-        //let loginVC = LoginVC1()
-        //loginVC.view.backgroundColor = .white
-        let stb = UIStoryboard(name: "Main", bundle: nil)
-        let loginVC = stb.instantiateViewController(withIdentifier: "login") as! LoginVC1
+        if UserDefaults.standard.bool(forKey: "isLogin") {
+            let vc = ViewController()
+            vc.view.backgroundColor = .white
+            window?.rootViewController = UINavigationController(rootViewController: vc)
+        } else {
+            let stb = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = stb.instantiateViewController(withIdentifier: "login") as! LoginVC1
+            window?.rootViewController = UINavigationController(rootViewController: loginVC)
+        }
         
-        window?.rootViewController = UINavigationController(rootViewController: loginVC)
+        
         
         return true
     }
