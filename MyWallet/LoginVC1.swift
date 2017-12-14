@@ -31,7 +31,7 @@ class LoginVC1: UIViewController {
         API.login(username: txtUsername.text!, password: txtPassword.text!) { (data,response,error) in
             if error != nil {
                 print(error!.localizedDescription)
-            }
+            } else {
             
             print("ok!")
             let responseJSON = try? JSONSerialization.jsonObject(with: data!, options: [])
@@ -47,6 +47,8 @@ class LoginVC1: UIViewController {
                     self.isLogin = true
                 }
             }
+            }
+            
         }
     }
     

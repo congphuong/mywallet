@@ -25,13 +25,14 @@ class RegisterVC: UIViewController {
             (data,response,error) in
             if error != nil {
                 print(error!.localizedDescription)
-            }
+            } else {
             
             let responseJSON = try? JSONSerialization.jsonObject(with: data!, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
                 print(responseJSON)
                 self.cancel()
             }
+        }
         }
     }
     

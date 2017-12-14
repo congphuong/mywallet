@@ -47,7 +47,21 @@ class API {
             }.resume()
     }
     
-    
+    static func getDetail(username: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) -> Swift.Void {
+        print("register click")
+        var url = URLRequest(url: URL(string: host + "/customer/" + username)!)
+        //let url1 = URL(string: host)
+        url.httpMethod = "GET"
+        let token = UserDefaults.standard.string(forKey: "token")
+        url.addValue(token!, forHTTPHeaderField: "Authorization")
+        url.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        
+        URLSession.shared.dataTask(with: url) { (data,response, error) in
+            //print("ok!")
+            completionHandler(data, response, error)
+            }.resume()
+    }
 }
 struct Auth {
     var id: Int

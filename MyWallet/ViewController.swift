@@ -44,9 +44,10 @@ class ViewController: UIViewController {
     }
     
     @objc func btQRClick(){
-        let vc2 = VC2()
-        vc2.view.backgroundColor = .white
-        self.navigationController?.pushViewController(vc2, animated: true)
+        //let vc2 = VC2()
+        let stb = UIStoryboard(name: "Main", bundle: nil)
+        let vc2 = stb.instantiateViewController(withIdentifier: "VerifyVC") as? VerifyVC
+        self.navigationController?.pushViewController(vc2!, animated: true)
     }
     @objc func btHistoryClick(){
         let layout = UICollectionViewFlowLayout()

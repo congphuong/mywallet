@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B24BF66A1FE1522700D1F30D /* VerifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF6691FE1522700D1F30D /* VerifyVC.swift */; };
 		B27E5B4D1FC94C2A008F680F /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27E5B4C1FC94C2A008F680F /* HistoryVC.swift */; };
 		B27E5B4F1FC94C42008F680F /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27E5B4E1FC94C42008F680F /* WalletVC.swift */; };
 		B27E5B511FC94C57008F680F /* GenerateQRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27E5B501FC94C57008F680F /* GenerateQRVC.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B24BF6691FE1522700D1F30D /* VerifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyVC.swift; sourceTree = "<group>"; };
 		B27E5B4C1FC94C2A008F680F /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		B27E5B4E1FC94C42008F680F /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
 		B27E5B501FC94C57008F680F /* GenerateQRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQRVC.swift; sourceTree = "<group>"; };
@@ -126,13 +128,14 @@
 				B2A442A11FC860C900C62CF6 /* VC2.swift */,
 				B27E5B4C1FC94C2A008F680F /* HistoryVC.swift */,
 				B27E5B4E1FC94C42008F680F /* WalletVC.swift */,
+				B2F91AA71FDFC556000C9717 /* API.swift */,
 				B27E5B501FC94C57008F680F /* GenerateQRVC.swift */,
 				B27E5B521FC96126008F680F /* QRCodeDetailVC.swift */,
 				B29976891FCBED59004A9F9A /* History.swift */,
 				B29A12C81FDE3EAA00604141 /* Extention.swift */,
 				B2CBCBEA1FDFAA910061D2AB /* LoginVC1.swift */,
 				B2CBCBEC1FDFAAD90061D2AB /* RegisterVC.swift */,
-				B2F91AA71FDFC556000C9717 /* API.swift */,
+				B24BF6691FE1522700D1F30D /* VerifyVC.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			files = (
 				B2A442A21FC860C900C62CF6 /* VC2.swift in Sources */,
 				B27E5B4D1FC94C2A008F680F /* HistoryVC.swift in Sources */,
+				B24BF66A1FE1522700D1F30D /* VerifyVC.swift in Sources */,
 				B299768A1FCBED59004A9F9A /* History.swift in Sources */,
 				B2E029631FC5661700040173 /* ViewController.swift in Sources */,
 				B29A12C91FDE3EAA00604141 /* Extention.swift in Sources */,
