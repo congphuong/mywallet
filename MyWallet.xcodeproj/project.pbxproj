@@ -100,9 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				B2E0295F1FC5661700040173 /* MyWallet */,
-				B2E029741FC5661700040173 /* MyWalletTests */,
 				B2E0297F1FC5661700040173 /* MyWalletUITests */,
 				B2E0295E1FC5661700040173 /* Products */,
+				B2E029741FC5661700040173 /* MyWalletTests */,
 			);
 			sourceTree = "<group>";
 		};

@@ -11,8 +11,19 @@ import LocalAuthentication
 class VerifyVC:UIViewController {
     
     let kMsgShowFinger = "Show me your finger 👍"
-    let kMsgShowReason = "🌛 Try to dismiss this screen 🌜"
+    let kMsgShowReason = "Try to verify transfer!"
     let kMsgFingerOK = "Login successful! ✅"
+    
+    @IBOutlet weak var lbStk: UILabel!
+    @IBOutlet weak var lbUsername: UILabel!
+    @IBOutlet weak var lbAmount: UILabel!
+    @IBOutlet weak var txtNote: UITextView!
+    @IBOutlet weak var verifybt: UIButton!
+    var code:String = ""
+    var stk = ""
+    var username = ""
+    var amount = ""
+    var note = ""
     
     var context = LAContext()
     
@@ -20,6 +31,10 @@ class VerifyVC:UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        lbStk.text = stk
+        lbUsername.text = username
+        lbAmount.text = amount
+        txtNote.text = note
     }
     
     @IBAction func btVerify(_ sender: Any) {
@@ -43,7 +58,7 @@ class VerifyVC:UIViewController {
         guard context.canEvaluatePolicy(policy!, error: &err) else {
             print("touchID off")
             // Print the localized message received by the system
-            print(err?.localizedDescription)
+            print(err!.localizedDescription)
             return
         }
         
@@ -98,9 +113,35 @@ class VerifyVC:UIViewController {
                 
                 // Good news! Everything went fine 👏
                 print(self.kMsgFingerOK)
+                self.exchange()
             }
         })
     }
+    
+    func exchange(){
+        API.tranferqr(code: self.code, completionHandler: {(data,responese,error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                let responseJSON = try? JSONSerialization.jsonObject(with: data!, options: [])
+                if let responseJSON = responseJSON as? [String: Any] {
+                    print(responseJSON)
+                    guard let status = responseJSON["status"] as? Int else {
+                        DispatchQueue.main.async {
+                        self.verifybt.isHidden = true
+                        }
+                        
+                        return
+                    }
+                    print(status)
+                    
+                }
+                
+                
+            }
+        })
+    }
+    
     private func showUnexpectedErrorMessage() {
         print("touchID off")
         print("Unexpected error! 😱")

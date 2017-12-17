@@ -44,24 +44,15 @@ class ViewController: UIViewController {
     }
     
     @objc func btQRClick(){
-        //let vc2 = VC2()
-        let stb = UIStoryboard(name: "Main", bundle: nil)
-        let vc2 = stb.instantiateViewController(withIdentifier: "VerifyVC") as? VerifyVC
-        self.navigationController?.pushViewController(vc2!, animated: true)
+        let vc2 = VC2()
+        //let stb = UIStoryboard(name: "Main", bundle: nil)
+        //let vc2 = stb.instantiateViewController(withIdentifier: "VerifyVC") as? VerifyVC
+        
+        self.navigationController?.pushViewController(vc2, animated: true)
     }
     @objc func btHistoryClick(){
         let layout = UICollectionViewFlowLayout()
-        var histories: [History] = []
-        let h1 = History(id: "1",type: "a",amount: 123)
-        let h2 = History(id: "2",type: "b",amount: 123)
-        let h3 = History(id: "3",type: "c",amount: 123)
-        let h4 = History(id: "4",type: "d",amount: 123)
-        histories.append(h1)
-        histories.append(h2)
-        histories.append(h3)
-        histories.append(h4)
         let vc2 = HistoryVC(collectionViewLayout: layout)
-        print(histories.count as Any)
         //vc2.histories = histories
         //vc2.view.backgroundColor = .white
         self.navigationController?.pushViewController(vc2, animated: true)

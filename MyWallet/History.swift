@@ -9,13 +9,15 @@
 import Foundation
 
 struct History {
-    var id:String?
-    var type:String?
+    var id:Int?
+    var type:Int?
     var amount:Double?
+    var timestamp:Double
     
-    init(id:String, type:String, amount:Double){
+    init(id:Int, type:Int, amount:Double, time:Double){
         self.id = id
         self.type = type
         self.amount = amount
+        self.timestamp = time
     }
 }

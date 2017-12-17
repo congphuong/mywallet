@@ -45,11 +45,34 @@ class GenerateQRVC: UIViewController {
     }()
     
     @objc func btGenerateClick(){
-        let codeDetail = QRCodeDetailVC()
-        codeDetail.code = txtCost.text! + ":" + txtNote.text!
-        codeDetail.view.backgroundColor = .white
-        navigationController?.pushViewController(codeDetail, animated: true)
         
+        if let cost = Double(txtCost.text!) {
+            API.encode(exchangMoney: cost, note: txtNote.text!){
+                (data,response,error) in
+                if error != nil {
+                    print(error!.localizedDescription)
+                } else {
+                    let responseJSON = try? JSONSerialization.jsonObject(with: data!, options: [])
+                    if let responseJSON = responseJSON as? [String: Any] {
+                        print(responseJSON)
+                        guard let status = responseJSON["status"] as? Int else {
+                            if let code = responseJSON["code"] {
+                            DispatchQueue.main.async {
+                                let codeDetail = QRCodeDetailVC()
+                                codeDetail.code = code as? String
+                                codeDetail.view.backgroundColor = .white
+                                self.navigationController?.pushViewController(codeDetail, animated: true)
+                            }
+                            }
+                            return
+                        }
+                        
+                        
+                    }
+                }
+            }
+        
+        }
     }
     
     private func setupView() {

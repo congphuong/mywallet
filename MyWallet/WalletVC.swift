@@ -31,11 +31,15 @@ class WalletVC: UIViewController {
             let responseJSON = try? JSONSerialization.jsonObject(with: data!, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
                 print(responseJSON)
+                guard let status = responseJSON["status"] as? Int else {
                 DispatchQueue.main.async {
                     self.username.text = responseJSON["nameCustomer"] as? String
                     let a:Int = responseJSON["totalMoney"] as! Int
                     self.amount.text = String(a) + " vnd"
                 }
+                    return
+                }
+                
                 
             }
             
